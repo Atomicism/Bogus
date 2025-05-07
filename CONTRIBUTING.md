@@ -1,9 +1,9 @@
 Ensure any classes, packages, etc. are in a relevant folder/subfolder:
+* assets
 * audio
-* core 
+* files
 * graphics
 * input
-* physics
-* net
-* service
-* ui
+* math
+* struct
+* util
