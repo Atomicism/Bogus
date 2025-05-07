@@ -1,0 +1,9 @@
+#!/bin/bash
+rm -rf build
+mkdir -p build
+javac -d build $(find src/bogus -name "*.java")
+jar cf build/bogus.jar -C build .
+
+rm -rf mod-test/*.class
+javac -cp build/bogus.jar mod-test/TestMod.java
+jar cf mod-test/mod.jar -C mod-test .

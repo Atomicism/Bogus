@@ -1,4 +1,4 @@
-package tests.bogus.util;
+package tests.bogus;
 
 import bogus.util.*;
 import tests.*;

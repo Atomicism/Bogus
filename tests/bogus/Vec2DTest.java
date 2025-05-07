@@ -1,4 +1,4 @@
-package tests.bogus.math;
+package tests.bogus;
 
 import bogus.math.Vec2D;
 import tests.Test;
