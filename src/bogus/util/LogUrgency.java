@@ -1,10 +1,10 @@
 package bogus.util;
 
 public enum LogUrgency {
-    LOG("Log"),
-    WARNING("Warn"),
-    ERROR("Error"),
-    CRITICAL("Critical Error");
+    LOG("LOG"),
+    WARNING("WARN"),
+    ERROR("ERROR"),
+    CRITICAL("CRITICAL");
 
     public String str;
 
