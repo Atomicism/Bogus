@@ -3,5 +3,3 @@
 mod-test
 script-test
 build
-
-TestMain.java

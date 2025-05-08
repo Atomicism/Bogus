@@ -64,7 +64,7 @@ public class ScriptModLoader extends Loader {
 
         java.io.File folder = new java.io.File(modPath);
         if (!folder.exists() || !folder.isDirectory()) {
-            logger.err("Mod directory does not exist: " + modPath);
+            logger.log("Mod directory does not exist");
             return mods;
         }
 

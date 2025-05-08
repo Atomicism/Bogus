@@ -18,6 +18,10 @@ public class ModLoader extends Loader {
         logger.log("Beginning mod loading");
 
         File modsDir = new File(modsDirectory);
+        if(!modsDir.exists()){
+            logger.log("Modding directory not found");
+            return;
+        }
         File[] files = modsDir.listFiles((dir, name) -> name.endsWith(".jar"));
 
         if (files == null){
