@@ -8,4 +8,8 @@ public class Pair<T, E> {
         first = v1;
         second = v2;
     }
+
+    public String toString(){
+        return String.format("(%s, %s)", first, second);
+    }
 }
