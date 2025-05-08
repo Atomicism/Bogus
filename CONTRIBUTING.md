@@ -1,9 +1,11 @@
 Ensure any classes, packages, etc. are in a relevant folder/subfolder:
 * assets
 * audio
-* files
+* core
+* func
 * graphics
 * input
 * math
+* mod
 * struct
 * util

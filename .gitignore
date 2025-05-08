@@ -3,3 +3,4 @@
 mod-test
 script-test
 build
+./assets/*

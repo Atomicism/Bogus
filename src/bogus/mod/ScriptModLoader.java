@@ -14,8 +14,7 @@ public class ScriptModLoader extends Loader {
 
     public static String scriptsDirectory = "script-test";
 
-    Logger logger = new Logger(loaderName);
-
+    @Override
     public void load() {
         logger.log("Beginning script loading");
         // this.bindings();

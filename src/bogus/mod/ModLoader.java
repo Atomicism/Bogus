@@ -10,10 +10,9 @@ import bogus.util.*;
 
 public class ModLoader extends Loader {
 
-    Logger logger = new Logger(loaderName);
-
     public static String modsDirectory = "mod-test";
 
+    @Override
     public void load() {
         logger.log("Beginning mod loading");
 
