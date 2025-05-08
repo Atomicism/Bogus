@@ -6,7 +6,10 @@ public class Logger {
     LogUrgency defaultUrgency;
 
     public void log(String message, LogUrgency urgency){
-        System.out.println(String.format("[%s][%s] %s", urgency.str, this.name, message));
+        LogMessage toLog = new LogMessage(urgency, name, message);
+        Log.messages.add(toLog);
+        System.out.println(toLog);
+
         if(urgency == LogUrgency.CRITICAL){
             // TODO: This likely needs to be changed into a more standard quit function
             System.exit(1);
@@ -14,7 +17,10 @@ public class Logger {
     }
 
     public void log(String message){
-        System.out.println(String.format("[%s][%s] %s", defaultUrgency.str, this.name, message));
+        LogMessage toLog = new LogMessage(defaultUrgency, name, message);
+        Log.messages.add(toLog);
+        System.out.println(toLog);
+
         if(defaultUrgency == LogUrgency.CRITICAL){
             // TODO: This likely needs to be changed into a more standard quit function
             System.exit(1);

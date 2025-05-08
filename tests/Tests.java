@@ -1,8 +1,8 @@
 package tests;
 
-import tests.bogus.math.Vec2DTest;
-import tests.bogus.util.FilesTest;
-import tests.bogus.util.LoggerTest;
+import tests.bogus.FilesTest;
+import tests.bogus.LoggerTest;
+import tests.bogus.Vec2DTest;
 
 public class Tests {
 
