@@ -6,10 +6,9 @@ import java.util.*;
 import java.util.jar.*;
 
 import bogus.core.*;
-import bogus.util.LogUrgency;
-import bogus.util.Logger;
+import bogus.util.*;
 
-public class ModLoader extends ContentLoader {
+public class ModLoader extends Loader {
 
     Logger logger = new Logger(loaderName);
 
