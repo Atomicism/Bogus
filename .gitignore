@@ -3,5 +3,6 @@
 mod-test
 script-test
 build
+bogus
 
 TestMain.java

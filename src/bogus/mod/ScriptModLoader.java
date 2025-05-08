@@ -5,7 +5,6 @@ import java.util.*;
 import javax.script.*;
 
 import bogus.core.*;
-import bogus.math.Vec2D;
 import bogus.util.*;
 import bogus.util.Files;
 
@@ -19,7 +18,6 @@ public class ScriptModLoader extends Loader {
 
     public void load() {
         logger.log("Beginning script loading");
-        logger.log("Loading bindings");
         // this.bindings();
 
         // logger.log("Loading scripts");
@@ -28,7 +26,7 @@ public class ScriptModLoader extends Loader {
         List<ScriptMod> mods = loadAllMods(scriptsDirectory);
 
         for (ScriptMod mod : mods) {
-            //logger.log("Loading mod: " + mod.name);
+            logger.log("Loading mod: " + mod.name);
 
             for (Path script : mod.scripts) {
                 try {
@@ -43,7 +41,7 @@ public class ScriptModLoader extends Loader {
                     bindings(mod.name);
 
                     engine.eval(scriptCode);
-                    // logger.log("Loaded script: " + script.getFileName());                    
+                    logger.log("Loaded script: " + script.getFileName());                    
                     // Optional onLoad() call
                     if (engine instanceof Invocable) {
                         Invocable inv = (Invocable) engine;
