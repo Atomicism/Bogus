@@ -17,6 +17,19 @@ public class Window extends Frame {
     
     public Window(String name){
         super(name);
+        this.addWindowListener(new WindowAdapter(){
+            public void windowClosing(WindowEvent we){
+                System.exit(0);
+            }
+        });
     }
-    
+
+    public Window(){
+        super();
+        this.addWindowListener(new WindowAdapter(){
+            public void windowClosing(WindowEvent we){
+                System.exit(0);
+            }
+        });
+    }
 }
