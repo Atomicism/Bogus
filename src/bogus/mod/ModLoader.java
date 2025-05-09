@@ -10,10 +10,17 @@ import bogus.util.*;
 
 public class ModLoader extends Loader {
 
-    Logger logger = new Logger(loaderName);
+    public static String modsDirectory = "mod-test";
 
+    @Override
     public void load() {
-        File modsDir = new File("mod-test");
+        logger.log("Beginning mod loading");
+
+        File modsDir = new File(modsDirectory);
+        if(!modsDir.exists()){
+            logger.log("Modding directory not found");
+            return;
+        }
         File[] files = modsDir.listFiles((dir, name) -> name.endsWith(".jar"));
 
         if (files == null){

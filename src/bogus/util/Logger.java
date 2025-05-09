@@ -27,6 +27,24 @@ public class Logger {
         }
     }
 
+    public void warn(String message){
+        LogMessage toLog = new LogMessage(LogUrgency.WARNING, name, message);
+        Log.messages.add(toLog);
+        System.out.println(toLog);
+    }
+
+    public void err(String message){
+        LogMessage toLog = new LogMessage(LogUrgency.ERROR, name, message);
+        Log.messages.add(toLog);
+        System.out.println(toLog);
+    }
+
+    public void critical(String message){
+        LogMessage toLog = new LogMessage(LogUrgency.CRITICAL, name, message);
+        Log.messages.add(toLog);
+        System.out.println(toLog);
+    }
+
     public Logger(String name){
         this.name = name;
         defaultUrgency = LogUrgency.LOG;
