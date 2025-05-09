@@ -1,6 +1,7 @@
 package bogus.graphics.shading;
 
 import java.awt.*;
+
 import bogus.math.geom.Vec3;
 
 /**
