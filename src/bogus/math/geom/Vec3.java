@@ -616,6 +616,10 @@ public class Vec3 implements Vector<Vec3>{
         return new Vec3(this.x - i, this.y - i, this.z - i);
     }
 
+    public Vec3 subtract(Vec3 v){
+        return new Vec3(this.x - v.x, this.y - v.y, this.z - v.z);
+    }
+
     public Vec3 multiply(float i){
         return new Vec3(this.x * i, this.y * i, this.z * i);
     }
@@ -629,6 +633,10 @@ public class Vec3 implements Vector<Vec3>{
     public Vec3 normalize(){
         float magnitude = (float)Math.sqrt(x * x + y * y + z * z);
         return new Vec3(x / magnitude, y / magnitude, z / magnitude);
+    }
+
+    public float length(){
+        return (float)Math.sqrt(x * x + y * y + z * z);
     }
 
     @Override

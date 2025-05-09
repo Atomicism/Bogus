@@ -4,9 +4,6 @@ import java.awt.*;
 
 import bogus.math.geom.Vec3;
 
-/**
- * Abstract base class for all types of lights
- */
 public abstract class Light {
     protected Color color = Color.WHITE;
     protected float intensity = 1.0f;
@@ -75,4 +72,9 @@ public abstract class Light {
         return new Color(r, g, b);
     }
 }
+
+
+
+
+
 
