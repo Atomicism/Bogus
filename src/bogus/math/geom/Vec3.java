@@ -604,6 +604,33 @@ public class Vec3 implements Vector<Vec3>{
         return (oldLen2 == 0 || oldLen2 == len2) ? this : scl((float)Math.sqrt(len2 / oldLen2));
     }
 
+    public Vec3 multiply(Vec3 v){
+        return new Vec3(v.x * this.x, this.y * v.y, v.z * this.z);
+    }
+
+    public Vec3 multiply(int i){
+        return new Vec3(this.x * i, this.y * i, this.z * i);
+    }
+
+    public Vec3 subtract(int i){
+        return new Vec3(this.x - i, this.y - i, this.z - i);
+    }
+
+    public Vec3 multiply(float i){
+        return new Vec3(this.x * i, this.y * i, this.z * i);
+    }
+
+    public Vec3 reflect(Vec3 normal){
+        float dotProduct = this.dot(normal);
+        Vec3 scaledNormal = normal.multiply(2 * dotProduct);
+        return this.add(scaledNormal.multiply(-1)); // Subtract scaled normal from the incident vector
+    }
+
+    public Vec3 normalize(){
+        float magnitude = (float)Math.sqrt(x * x + y * y + z * z);
+        return new Vec3(x / magnitude, y / magnitude, z / magnitude);
+    }
+
     @Override
     public Vec3 clamp(float min, float max){
         final float len2 = len2();
